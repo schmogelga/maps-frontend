@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bem-vindo</title>
+  <!-- Incluir o script do Google Maps -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=SUA_CHAVE_API"></script>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <!-- Conteúdo do header aqui -->
+      <h1>Bem-vindo!</h1>
+      <button mat-raised-button color="primary" (click)="logout()" class="button">Logout</button>
+      <button mat-raised-button color="primary" *ngIf="isAdmin()" (click)="navigateTo('/secret')" class="button">Usuários</button>
+      <button mat-raised-button color="primary" *ngIf="isAdmin() || isOperador()" (click)="navigateTo('/cadastrar-produtos')" class="button">Cadastro de Produtos</button>
+    </div>
+  </header>
+  
+  <app-map></app-map>
+
+
+  <footer>
+    <div class="footer-container">
+      <!-- Conteúdo do footer aqui -->
+      <p>© 2024 Sua Empresa. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>

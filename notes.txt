@@ -1,0 +1,6 @@
+crud de produtos
+tela de boas vindas
+permissionar tela secret somente para ADMIN
+tela de cadastro de produtos - ADMIN e OPERADOR
+tela de listagem de produtos - CLIENTE
+adicionar botões navegáveis das telas

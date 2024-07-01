@@ -13,8 +13,6 @@
       <!-- Conteúdo do header aqui -->
       <h1>Bem-vindo!</h1>
       <button mat-raised-button color="primary" (click)="logout()" class="button">Logout</button>
-      <button mat-raised-button color="primary" *ngIf="isAdmin()" (click)="navigateTo('/secret')" class="button">Usuários</button>
-      <button mat-raised-button color="primary" *ngIf="isAdmin() || isOperador()" (click)="navigateTo('/cadastrar-produtos')" class="button">Cadastro de Produtos</button>
     </div>
   </header>
   

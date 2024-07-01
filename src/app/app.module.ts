@@ -22,9 +22,10 @@ import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { RegisterPageComponent } from './register-page/register-page.component';
 import { MapComponent } from './map/map.component';
+import { MapPointModalComponent } from './map-point-modal/map-point-modal.component';
 
 @NgModule({
-  declarations: [AppComponent, SecretComponent, LoginPageComponent, RegisterPageComponent, HomePageComponent, MapComponent],
+  declarations: [AppComponent, SecretComponent, LoginPageComponent, RegisterPageComponent, HomePageComponent, MapComponent, MapPointModalComponent],
   imports: [
     BrowserModule, 
     HttpClientModule, 

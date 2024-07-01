@@ -1,0 +1,22 @@
+<!-- map-point-modal.component.html -->
+<h1 mat-dialog-title>Adicionar Ponto no Mapa</h1>
+<div mat-dialog-content>
+  <form [formGroup]="pointForm">
+    <mat-form-field>
+      <mat-label>Descrição</mat-label>
+      <textarea matInput formControlName="description"></textarea>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Latitude</mat-label>
+      <input matInput formControlName="latitude" readonly>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Longitude</mat-label>
+      <input matInput formControlName="longitude" readonly>
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="close()">Cancelar</button>
+  <button mat-button (click)="save()">Salvar</button>
+</div>

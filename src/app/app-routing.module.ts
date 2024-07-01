@@ -7,6 +7,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomePageComponent } from './home-page/home-page.component';
 import { AdminGuard } from './helpers/admin.guard';
 import { OperadorGuard } from './helpers/operador.guard';
+import { AdminPanelComponent } from './admin-panel/admin-panel.component';
 
 const routes: Routes = [
   {
@@ -27,6 +28,11 @@ const routes: Routes = [
     path: 'register',
     component: RegisterPageComponent,
   },
+  { 
+    path: 'admin-panel', 
+    component: AdminPanelComponent,
+    canActivate: [AdminGuard],
+  }
 ];
 
 @NgModule({

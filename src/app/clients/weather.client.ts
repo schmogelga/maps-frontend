@@ -1,6 +1,6 @@
 import { environment } from './../../environments/environment';
 import { Observable } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -23,7 +23,21 @@ export class WeatherClient {
     return this.http.post(environment.apiUrl + '/eventos', payload);
   }
 
-  getEvents(): Observable<any[]> {
-    return this.http.get<any[]>(environment.apiUrl + '/eventos');
+  getEvents(status?: string): Observable<any[]> {
+    let params = new HttpParams();
+
+    if (status) {
+      params = params.set('status', status);
+    }
+
+    return this.http.get<any[]>(`${environment.apiUrl}/eventos`, { params });
+  }
+
+  aprovarEvento(id: string): Observable<any> {
+    return this.http.patch(`${environment.apiUrl}/eventos/${id}`, { status: 'ATIVO' });
+  }
+
+  resolverEvento(id: string): Observable<any> {
+    return this.http.patch(`${environment.apiUrl}/eventos/${id}`, { status: 'RESOLVIDO' });
   }
 }

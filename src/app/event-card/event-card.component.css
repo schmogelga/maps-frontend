@@ -1,0 +1,14 @@
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.card-active {
+  background-color: #ffcccc; /* Cor vermelha para cards ATIVO */
+}
+
+.card-default {
+  background-color: #f0f0f0; /* Cor padrão para outros cards */
+}

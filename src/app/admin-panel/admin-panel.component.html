@@ -1,0 +1,28 @@
+<header>
+    <div class="header-container">
+      <h1>Painel do Admin</h1>
+    </div>
+  </header>
+  
+  <div class="admin-panel">
+    <h2>Fila de Eventos</h2>
+    <div class="card-columns">
+      <div class="card-column">
+        <div class="card" *ngFor="let card of cards">
+          <div class="card-content">
+            <h3>{{ card.descricao }}</h3>
+            <p>{{ card.registro }}</p>
+            <button mat-raised-button color="primary" *ngIf="card.status === 'ANALISE'" (click)="aprovar(card)">Aprovar</button>
+            <button mat-raised-button color="warn" *ngIf="card.status === 'ATIVO'" (click)="resolver(card)">Resolver</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <footer>
+    <div class="footer-container">
+      <p>© 2024 Sua Empresa. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+  

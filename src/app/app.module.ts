@@ -23,9 +23,11 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import { RegisterPageComponent } from './register-page/register-page.component';
 import { MapComponent } from './map/map.component';
 import { MapPointModalComponent } from './map-point-modal/map-point-modal.component';
+import { AdminPanelComponent } from './admin-panel/admin-panel.component';
+import { EventCardComponent } from './event-card/event-card.component';
 
 @NgModule({
-  declarations: [AppComponent, SecretComponent, LoginPageComponent, RegisterPageComponent, HomePageComponent, MapComponent, MapPointModalComponent],
+  declarations: [AppComponent, SecretComponent, LoginPageComponent, RegisterPageComponent, HomePageComponent, MapComponent, MapPointModalComponent, AdminPanelComponent, EventCardComponent],
   imports: [
     BrowserModule, 
     HttpClientModule, 

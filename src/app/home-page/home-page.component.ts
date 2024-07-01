@@ -15,11 +15,11 @@ export class HomePageComponent implements OnInit {
   }
 
   navigateTo(route: string): void {
-    this.router.navigate([route]); // Navegue para a rota especificada
+    window.open(route, '_blank'); // Abre a rota em uma nova guia
   }
-
+  
   logout(): void {
-    this.authenticationService.logout(); // Chame o método logout() do AuthenticationClient
+    this.authenticationService.logout(); 
   }
 
   isAdmin(){
